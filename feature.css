@@ -379,7 +379,7 @@ body.feature #main.reset .feature_splash {
 
 .dc-structure-selection-featurecard .select-a {
 	margin-top: 0px;
-	color: #008fce;
+	color: #443b3b;
 	cursor:default;
 	display: block;
 	font-size: 20px;
@@ -389,6 +389,9 @@ body.feature #main.reset .feature_splash {
 }
 .dc-structure-selection-featurecard .select-a:hover {
 	text-decoration:none;
+}
+.dc-structure-selection-featurecard  .step-1 .select-a {
+	color: #008fce;
 }
 .dc-structure-selection-featurecard  .step-1 .select-a:hover {
 	color: #00365f;
