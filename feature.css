@@ -380,16 +380,20 @@ body.feature #main.reset .feature_splash {
 .dc-structure-selection-featurecard .select-a {
 	margin-top: 0px;
 	color: #008fce;
+	cursor:default;
 	display: block;
 	font-size: 20px;
-	cursor: pointer;
 	padding-top: 46px;
 	opacity: 1;
 	max-width: 86%;
 }
-
 .dc-structure-selection-featurecard .select-a:hover {
+	text-decoration:none;
+}
+.dc-structure-selection-featurecard  .step-1 .select-a:hover {
 	color: #00365f;
+	cursor: pointer;
+	text-decoration:underline;
 }
 
 .dc-tablet .dc-structure-selection-featurecard .select-a {
