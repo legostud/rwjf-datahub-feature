@@ -18,6 +18,11 @@
 			  $('.dc-structure-selection-featurecard .step').removeClass('active-step');
 			  
 			  $step.addClass('active-step');
+
+			  $('.step-2 .payload-wrapper').hide();
+			  $('.step-3 .payload-wrapper').hide();
+			  $('.step-3 .view-report-wrapper').hide();
+
 		 });
 		 
 		 $(document).on('click', '.step-1 .payload .selection-item', { dataManager: dataManager }, function(ev) {
@@ -34,9 +39,13 @@
 			  
 			  ev.data.dataManager.render($('.step-2 .payload'), model.Indicators);
 			  
+			  $('.step-2 .payload-wrapper').show();
+			  $('.step-3 .payload-wrapper').hide();
+			  $('.step-3 .view-report-wrapper').hide();
+
 			  $('.dc-structure-selection-featurecard .step').removeClass('active-step');
 			  
-			  $('.dc-structure-selection-featurecard .step-1').addClass('active-step');	
+			  $('.dc-structure-selection-featurecard .step-2').addClass('active-step');	
 			  
 			  dataManager.handleChange();
 			  
@@ -56,9 +65,13 @@
 
 			  $('.dc-structure-selection-featurecard .step').removeClass('active-step');
 			  
-			  $('.dc-structure-selection-featurecard .step-2').addClass('active-step');			  
+			  $('.dc-structure-selection-featurecard .step-3').addClass('active-step');			  
 			  
 			  dataManager.handleChange();
+
+			  $('.step-2 .payload-wrapper').show();
+			  $('.step-3 .payload-wrapper').show();
+			  $('.step-3 .view-report-wrapper').show();
 			  
 		 });
 		 
