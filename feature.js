@@ -164,7 +164,7 @@
 				
 				self.render($('.step-1 .payload'), self.categories);
 				
-				self.render($('.step-2 .payload'), self.categories[0].Indicators);
+				// self.render($('.step-2 .payload'), self.categories[0].Indicators);
  
 				// $('.step-1 .payload li').first().addClass('active');
 				
