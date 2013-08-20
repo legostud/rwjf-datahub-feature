@@ -9,7 +9,7 @@
 		
 		var dataManager = new DataManager(configUrl).init();
 		
-		 $(document).on('click', '.dc-structure-selection-featurecard .select-a', function(ev) {
+		 $(document).on('click', '.dc-structure-selection-featurecard .step-1 .select-a', function(ev) {
 		 
 			  var $step = $(ev.currentTarget).closest('.step');
 			  
