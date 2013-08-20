@@ -37,7 +37,7 @@
 			  
 			  $category.addClass('active');
 			  
-			  ev.data.dataManager.render($('.step-2 .payload'), model.Indicators);
+			  ev.data.dataManager.renderIndicator($('.step-2 .payload'), model.Indicators);
 			  
 			  $('.step-2 .payload-wrapper').show();
 			  $('.step-3 .payload-wrapper').hide();
@@ -220,6 +220,29 @@
 			
 		});
 	 };
+
+	 DataManager.prototype.renderIndicator = function($step, models) {
+		var self = this;
+
+		// Reset
+		$step.empty();
+		
+		// Main DOM elements
+		
+		// Render Categories
+		$.each( models, function( index, model ) {
+			var distributions = self.parseDistributions(model);
+			var lbl = model.ShortName ? model.ShortName : model.Name;
+			
+			$('<li/>')
+				.addClass('selection-item')
+				.addClass(index === 0 ? 'dc-first' : '')
+				.data('model', model)
+				.html('<span class="icon">&nbsp;</span><a href="#" class="selection-link">' + lbl + '</a>')
+				.appendTo($step);
+			
+		});
+	 };
 	 
 	 DataManager.prototype.renderLocations = function(models) {
 	 
@@ -257,11 +280,11 @@
 	 DataManager.prototype.handleChange = function() {
 
 		// Determines the opacity level of view report btn
-		$('.step-2 .payload .active').length === 0
-		
-			? $('.dc-structure-selection-featurecard').removeClass('enabled')
-
-			: $('.dc-structure-selection-featurecard').addClass('enabled')
+		if( $('.step-2 .payload .active').length === 0 ) {
+			$('.dc-structure-selection-featurecard').removeClass('enabled');
+		} else {
+			$('.dc-structure-selection-featurecard').addClass('enabled');
+		}
 		
 		// Reset warning message
 		$('.view-report-msg').hide();
@@ -274,13 +297,11 @@
 			$msg = $('.view-report-msg');
 		
 		// Show warning if no indicator selected
-		$('.step-2 .payload .active').length === 1 
-		
-			? $msg.hide()
-			
-			: $msg.show();
-		
-		
+		if($('.step-2 .payload .active').length === 1 ){
+			$msg.hide();
+		} else {
+			$msg.show();
+		}
 		
 		if ($('.dc-structure-selection-featurecard').hasClass('enabled')) {
 		
@@ -328,6 +349,37 @@
 		return link;
 	 };
 	 
+	 DataManager.prototype.parseDistributions = function(model) {
+		var distributions,
+			characteristics,
+			temp;
+		
+		// Are there any distributions
+		if (model.Distributions.length) {
+			distributions = model.Distributions;
+		} else {
+			return false;
+		}
+		
+		// Is this a double-distribution?
+		if (distributions && distributions[0].IsDoubleDistribution) {
+			// Get the first characteristic
+			if (distributions[0].Characteristics.length) {
+				characteristics = distributions[0].Characteristics[0];
+			} else {
+				return false;
+			}
+
+			// Update the response to point to the nested distributions instead of the master distribution
+			if (characteristics && characteristics.Distributions.length) {
+				distributions = characteristics.Distributions;
+			} else {
+				return false;
+			}
+		}
+		
+		return distributions;
+	};
 	 
 }(jQuery))
 
