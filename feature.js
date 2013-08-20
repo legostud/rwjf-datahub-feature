@@ -166,13 +166,13 @@
 				
 				self.render($('.step-2 .payload'), self.categories[0].Indicators);
  
-				$('.step-1 .payload li').first().addClass('active');
+				// $('.step-1 .payload li').first().addClass('active');
 				
-				$('.step-2 .payload li').first().addClass('active');
+				// $('.step-2 .payload li').first().addClass('active');
 				
 				self.renderLocations(self.locations);
 
-				$('.dc-structure-selection-featurecard').addClass('enabled');
+				// $('.dc-structure-selection-featurecard').addClass('enabled');
 				
 				self.$categories = $('.step-1 .payload');
 				
