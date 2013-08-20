@@ -7,7 +7,7 @@ body.feature #main.reset .feature_splash {
 
 #_content_rwjf_en_research-publications_research-features_rwjf-datahub_jcr_content_cardContent .feature_splash {
   height: auto;
-  padding: 142px 0 0 0;
+  padding: 115px 0 0 0;
 }
 
 #_content_rwjf_en_research-publications_research-features_rwjf-datahub_jcr_content_cardContent .feature_splash .feature-content  {
@@ -31,7 +31,7 @@ body.feature #main.reset .feature_splash {
 
 #_content_rwjf_en_research-publications_research-features_rwjf-datahub_jcr_content_cardContent #header {
 	position: relative;
-	margin: 20px 10px 0;
+	margin: 20px 10px;
 }
 
 .ie7 #_content_rwjf_en_research-publications_research-features_rwjf-datahub_jcr_content_cardContent #header {
@@ -65,10 +65,8 @@ body.feature #main.reset .feature_splash {
 	color: #fff;
 	font-weight: normal;
 	margin-left:24px;
-	margin-bottom: 2.5em;
     width: 300px;
 	padding-top: 6px;
-	vertical-align: middle;
 	font-family: 'museo-sans','Helvetica Neue','Neue Helvetica','Helvetica',sans-serif;
 }
 
