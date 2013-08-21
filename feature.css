@@ -209,7 +209,9 @@ body.feature #main.reset .feature_splash {
 }
 
 
-.dc-structure-selection-featurecard table.steps, .dc-structure-selection-featurecard table.steps tr, .dc-structure-selection-featurecard table.steps tr td {
+.dc-structure-selection-featurecard table.steps, 
+.dc-structure-selection-featurecard table.steps tr, 
+.dc-structure-selection-featurecard table.steps tr td {
 	border-collapse: separate;
 }
 
@@ -233,6 +235,7 @@ body.feature #main.reset .feature_splash {
   position: absolute;
   background: #FFF;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.10);
+  z-index:999;
 }
 
 .dc-structure-selection-featurecard .bd .step {
@@ -276,7 +279,8 @@ body.feature #main.reset .feature_splash {
 	background: none repeat scroll 0 0 rgba(255, 255, 255, 0.45);
 } 
 
-.ie7 .dc-structure-selection-featurecard .bd table.steps, .ie8 .dc-structure-selection-featurecard .bd table.steps {
+.ie7 .dc-structure-selection-featurecard .bd table.steps, 
+.ie8 .dc-structure-selection-featurecard .bd table.steps {
 	background: #FFFFFF;
     -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
     filter: alpha(opacity=50);  
@@ -298,14 +302,17 @@ body.feature #main.reset .feature_splash {
 	background: #FFF;
 }
 
-.dc-structure-selection-featurecard.open .bd .step.step-1, .dc-structure-selection-featurecard.open .bd .step.step-2 {
+.dc-structure-selection-featurecard.open .bd .step.step-1, 
+.dc-structure-selection-featurecard.open .bd .step.step-2 {
 	box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.05);
 	z-index: 1000;
 	background: url('/images/map/grants/bg-circle-62x62.png') no-repeat 20px 30px #FFF;
 }
 
-.ie7 .dc-structure-selection-featurecard.open .bd .step-1, .ie7 .dc-structure-selection-featurecard.open .bd .step-2,
-.ie8 .dc-structure-selection-featurecard.open .bd .step-1, .ie8 .dc-structure-selection-featurecard.open .bd .step-2 {
+.ie7 .dc-structure-selection-featurecard.open .bd .step-1, 
+.ie7 .dc-structure-selection-featurecard.open .bd .step-2,
+.ie8 .dc-structure-selection-featurecard.open .bd .step-1, 
+.ie8 .dc-structure-selection-featurecard.open .bd .step-2 {
 	border-right-color: #EEE; 
 	border-right-width: 1px; 
 	border-right-style: solid;
@@ -493,6 +500,23 @@ body.feature #main.reset .feature_splash {
 	float: right;
 	width: 22px;
 	display: inline-block;
+}
+.dc-structure-selection-featurecard .selection-item .distributions {
+	color: #443b3b;
+	font-size: 10px;
+	margin-left: 20px;
+	padding-top: 3px;
+}
+.dc-structure-selection-featurecard .selection-item .distributions  span {
+	padding-left:0.2em;
+}
+.dc-structure-selection-featurecard .selection-item .distributions  span:after {
+	content:"|";
+	color: #999999;
+	padding-left:0.2em;
+}
+.dc-structure-selection-featurecard .selection-item .distributions  span:last-child:after {
+	content:"";
 }
 
 .dc-structure-selection-featurecard .selection-link {

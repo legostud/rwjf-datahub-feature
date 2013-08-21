@@ -84,6 +84,10 @@
 			  $('.dc-structure-selection-featurecard .step-1').addClass('active-step');				  
 			  
 			  dataManager.handleChange();			  
+
+			  $('.step-2 .payload-wrapper').hide();
+			  $('.step-3 .payload-wrapper').hide();
+			  $('.step-3 .view-report-wrapper').hide();
 			  
 		 });
 		 
@@ -233,13 +237,22 @@
 		$.each( models, function( index, model ) {
 			var distributions = self.parseDistributions(model);
 			var lbl = model.ShortName ? model.ShortName : model.Name;
-			
-			$('<li/>')
+			var $indicator = $('<li/>')
 				.addClass('selection-item')
 				.addClass(index === 0 ? 'dc-first' : '')
 				.data('model', model)
-				.html('<span class="icon">&nbsp;</span><a href="#" class="selection-link">' + lbl + '</a>')
-				.appendTo($step);
+				.html('<span class="icon">&nbsp;</span><a href="#" class="selection-link">' + lbl + '</a>');
+				
+			if (distributions) {
+				var $distributions = $('<p class="distributions"><b>BREAKDOWNS:</b></p>');
+				$.each(distributions, function(index, distribution) {
+					var name = distribution.DisplayName ? distribution.DisplayName : distribution.Name;
+					$distributions.append('<span>' + name + '</span>');
+				});
+				$distributions.appendTo($indicator);
+			}
+			
+			$indicator.appendTo($step);
 			
 		});
 	 };
