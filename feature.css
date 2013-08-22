@@ -67,7 +67,7 @@ body.feature #main.reset .feature_splash {
 	margin-left:24px;
     width: 300px;
 	padding-top: 6px;
-	font-family: 'museo-sans','Helvetica Neue','Neue Helvetica','Helvetica',sans-serif;
+	font-family:'museo-sans-n5', 'museo-sans','Helvetica Neue','Neue Helvetica','Helvetica',sans-serif;
 }
 
 #_content_rwjf_en_research-publications_research-features_rwjf-datahub_jcr_content_cardContent h3.datahub {
@@ -75,7 +75,7 @@ body.feature #main.reset .feature_splash {
 	line-height: 1.4;
 	display: none;
 	color: #fff;
-	font-family: 'museo-sans','Helvetica Neue','Neue Helvetica','Helvetica',sans-serif;
+	font-family: 'museo-sans-n5','museo-sans','Helvetica Neue','Neue Helvetica','Helvetica',sans-serif;
 }
 
 .ie7 #_content_rwjf_en_research-publications_research-features_rwjf-datahub_jcr_content_cardContent h2.datahub {
@@ -152,7 +152,7 @@ body.feature #main.reset .feature_splash {
 	text-transform: lowercase;
 	font-size: 15px;
 	color: #FFF;
-	font-family: 'museo-sans','Helvetica Neue','Neue Helvetica','Helvetica',sans-serif;
+	font-family: 'museo-sans-n5','museo-sans','Helvetica Neue','Neue Helvetica','Helvetica',sans-serif;
 }
 
 .dc-structure-selection-featurecard .submenu:hover {
@@ -190,7 +190,7 @@ body.feature #main.reset .feature_splash {
   padding: 18px;
   font-size: 13.5px;
   font-weight: 700;
-  font-family: 'museo-sans','Helvetica Neue','Neue Helvetica','Helvetica',sans-serif;
+  font-family: 'museo-sans-n7','museo-sans','Helvetica Neue','Neue Helvetica','Helvetica',sans-serif;
   text-transform: uppercase;
 }
 
@@ -531,7 +531,7 @@ body.feature #main.reset .feature_splash {
 	line-height: 38px;
 	font-size: 15px;
 	font-weight: 400;
-	font-family: 'museo-sans','Helvetica Neue','Neue Helvetica','Helvetica',sans-serif;
+	font-family: 'museo-sans-n5','museo-sans','Helvetica Neue','Neue Helvetica','Helvetica',sans-serif;
 	text-transform: uppercase;
 	position: absolute;
 	right: 26px;
@@ -562,7 +562,7 @@ body.feature #main.reset .feature_splash {
 	bottom: 78px;
 	color: #999;
 	font-size: 12px;
-	font-family: 'museo-sans','Helvetica Neue','Neue Helvetica','Helvetica',sans-serif;
+	font-family: 'museo-sans-n5','museo-sans','Helvetica Neue','Neue Helvetica','Helvetica',sans-serif;
 }
 
 .dc-structure-selection-featurecard .download-options {
